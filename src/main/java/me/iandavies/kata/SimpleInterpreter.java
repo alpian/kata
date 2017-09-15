@@ -3,12 +3,14 @@ package me.iandavies.kata;
 public class SimpleInterpreter implements Interpreter {
     @Override
     public String interpret(String... lines) {
-        if (lines[0].equals("+ 5 3"))
-            return "8";
-        else if (lines[0].equals("+ 9 1"))
-            return "10";
-        else if (lines[0].equals("+ 1 2 3"))
-            return "6";
-        return "18";
+        final String line = lines[0];
+        final String[] tokens = line.split(" ");
+        int sum = 0;
+
+        for(int i = 1; i < tokens.length; i++) {
+            sum += Integer.parseInt(tokens[i]);
+        }
+
+        return "" + sum;
     }
 }
