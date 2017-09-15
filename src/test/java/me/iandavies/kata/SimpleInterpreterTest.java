@@ -30,6 +30,12 @@ public class SimpleInterpreterTest {
         addition_test("+ 1 2 3", "6");
     }
 
+    @Test
+    public void
+    fifth_test() {
+        addition_test("+ 1 2 3 4", "10");
+    }
+
     private void
     addition_test(final String input, final String output) {
         assertThat(new SimpleInterpreter().interpret(input), equalTo(output));
