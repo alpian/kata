@@ -10,4 +10,9 @@ public class SimpleInterpreterTest {
     first_test() {
         assertThat(new SimpleInterpreter().interpret("+ 3 5"), equalTo("8"));
     }
+
+    @Test public void
+    second_test() {
+        assertThat(new SimpleInterpreter().interpret("+ 9 1"), equalTo("10"));
+    }
 }
