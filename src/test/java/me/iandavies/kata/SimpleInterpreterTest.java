@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class SimpleInterpreterTest {
     @Test public void
     first_test() {
-        assertThat(new SimpleInterpreter().interpret("+ 3 5"), equalTo("8"));
+        assertThat(new SimpleInterpreter().interpret("+ 5 3"), equalTo("8"));
     }
 
     @Test public void
