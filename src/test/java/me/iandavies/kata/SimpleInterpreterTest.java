@@ -20,4 +20,9 @@ public class SimpleInterpreterTest {
     third_test() {
         assertThat(new SimpleInterpreter().interpret("+ 12 6"), equalTo("18"));
     }
+
+    @Test public void
+    fourth_test() {
+        assertThat(new SimpleInterpreter().interpret("+ 1 2 3"), equalTo("6"));
+    }
 }
