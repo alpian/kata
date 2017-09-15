@@ -2,6 +2,8 @@ package me.iandavies.kata;
 
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -34,6 +36,19 @@ public class SimpleInterpreterTest {
     public void
     fifth_test() {
         addition_test("+ 1 2 3 4", "10");
+    }
+
+    @Test
+    public void
+    sixth_test() {
+        int num = 1098;
+        String input = "+";
+        int sum = 0;
+        for(int i = 0; i < num; ++i) {
+            input = input + " " + i;
+            sum += i;
+        }
+        addition_test(input, String.valueOf(sum));
     }
 
     private void
