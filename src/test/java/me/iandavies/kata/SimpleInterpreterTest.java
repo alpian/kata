@@ -41,14 +41,14 @@ public class SimpleInterpreterTest {
     @Test
     public void
     sixth_test() {
-        int num = 1098;
-        String input = "+";
+        int num = 100000;
+        StringBuilder sb = new StringBuilder("+");
         int sum = 0;
         for(int i = 0; i < num; ++i) {
-            input = input + " " + i;
+            sb.append(" ").append(i);
             sum += i;
         }
-        addition_test(input, String.valueOf(sum));
+        addition_test(sb.toString(), String.valueOf(sum));
     }
 
     private void
