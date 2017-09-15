@@ -15,4 +15,9 @@ public class SimpleInterpreterTest {
     second_test() {
         assertThat(new SimpleInterpreter().interpret("+ 9 1"), equalTo("10"));
     }
+
+    @Test public void
+    third_test() {
+        assertThat(new SimpleInterpreter().interpret("+ 12 6"), equalTo("18"));
+    }
 }
