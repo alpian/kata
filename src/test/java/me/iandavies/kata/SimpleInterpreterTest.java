@@ -6,23 +6,32 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class SimpleInterpreterTest {
-    @Test public void
+    @Test
+    public void
     first_test() {
-        assertThat(new SimpleInterpreter().interpret("+ 5 3"), equalTo("8"));
+        addition_test("+ 5 3", "8");
     }
 
-    @Test public void
+    @Test
+    public void
     second_test() {
-        assertThat(new SimpleInterpreter().interpret("+ 9 1"), equalTo("10"));
+        addition_test("+ 9 1", "10");
     }
 
-    @Test public void
+    @Test
+    public void
     third_test() {
-        assertThat(new SimpleInterpreter().interpret("+ 12 6"), equalTo("18"));
+        addition_test("+ 12 6", "18");
     }
 
-    @Test public void
+    @Test
+    public void
     fourth_test() {
-        assertThat(new SimpleInterpreter().interpret("+ 1 2 3"), equalTo("6"));
+        addition_test("+ 1 2 3", "6");
+    }
+
+    private void
+    addition_test(final String input, final String output) {
+        assertThat(new SimpleInterpreter().interpret(input), equalTo(output));
     }
 }
